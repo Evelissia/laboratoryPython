@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ипотечный калькулятор</title>
+    
+</head>
+<body>
+    <h1>Ипотечный калькулятор</h1>
+    <form action="/calculate" method="post">
+        <label for="loan_amount">Величина займа:</label>
+        <input type="text" name="loan_amount" id="loan_amount"><br><br>
+        <label for="interest_rate">Процентная ставка:</label>
+        <input type="text" name="interest_rate" id="interest_rate"><br><br>
+        <label for="loan_term">Срок кредита (в годах):</label>
+        <input type="text" name="loan_term" id="loan_term"><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</body>
+</html>
