@@ -20,6 +20,13 @@ def calculate():
 
 # функция для расчета ежемесячного платежа
 def calculate_monthly_payment(loan_amount, interest_rate, loan_term):
+    
+    if loan_amount < 0:
+        raise ValueError("Loan amount must be a positive value.")
+    
+    if interest_rate == 0.0:
+        return 0.0
+    
     monthly_interest_rate = interest_rate / 100 / 12
     num_payments = loan_term * 12
     monthly_payment = (loan_amount * monthly_interest_rate) / (1 - (1 + monthly_interest_rate) ** -num_payments)
